@@ -13,6 +13,8 @@ namespace SOLID_UDEMY
       pessoa.Identificar();
 
       Console.WriteLine(pessoa.Nome);
+
+      ClienteRico clienteRico = new ClienteRico(5, "vitor", "Pituba");
     }
   }
 }

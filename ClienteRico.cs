@@ -11,7 +11,7 @@ namespace SOLID_UDEMY
 
     public ClienteRico(int id, string nome, string endereco)
     {
-      if (id <= 0) throw new InvalidOperationException("Não pode ser menor que zero.");
+      DomainExceptionValidationException.When(id <= 0, "Não pode ser menor que zero.");
 
       Id = id;
       Nome = nome;
