@@ -9,6 +9,8 @@ namespace SOLID_UDEMY
       Pessoa pessoa = new Pessoa();
       pessoa.Nome = "Rafa";
       pessoa.Genero = "feminino";
+      //pessoa.Nome.PrimeiraLetraCaixaAlta();
+      pessoa.Nome = pessoa.Nome.PrimeiraLetraMinuscula();
 
       pessoa.Identificar();
 
