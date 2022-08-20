@@ -8,6 +8,14 @@ namespace SOLID_UDEMY
     public string Nome { get; private set; }
     public string Endereco { get; private set; }
 
+    private string _sobreNome;
+
+    public string SobreNome
+    {
+      get => _sobreNome;
+      private set => _sobreNome = value;
+    }
+
 
     public ClienteRico(int id, string nome, string endereco)
     {
@@ -25,7 +33,7 @@ namespace SOLID_UDEMY
 
     //Exemplo de argumentos nomeados
 
-    public void AlterarInformacoes(int id, string nome, string endereco) 
+    public void AlterarInformacoes(int id, string nome, string endereco)
     {
       Console.WriteLine($"{id}, {nome}, {endereco}");
     }
