@@ -16,7 +16,6 @@ namespace SOLID_UDEMY
 
       ClienteRico clienteRico = new ClienteRico(5, "vitor", "Pituba");
       clienteRico.Enderecos("Pituba", "São caetano", "Salvador Bahia");
-
       clienteRico.AlterarInformacoes(id: 1, nome: "Vitor", endereco: "Salvador");
     }
   }
