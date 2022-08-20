@@ -27,12 +27,12 @@ namespace SOLID
       Console.WriteLine(forma == circulo);
       Console.WriteLine(outroCirculo == forma);
 
+      Forma outraForma = new Forma();
+      Circulo maisUmCirculo = outraForma as Circulo; //As retorna null caso a conversão não seja possível
+
       try
       {
-        Forma outraForma = new Forma();
-        Circulo maisUmCirculo = outraForma as Circulo;
-        maisUmCirculo.PintarCirculo();
-        maisUmCirculo.Desenhar();
+        Circulo circuloEstranho = (Circulo) new Forma();
       }
       catch (InvalidCastException e) {
         Console.WriteLine($"Inválido{e.Message}");
