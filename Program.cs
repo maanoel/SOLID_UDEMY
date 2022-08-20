@@ -21,10 +21,16 @@ namespace SOLID
 
       Circulo circulo = new Circulo();
       Forma forma = circulo; //UPcasting
-      circulo = (Circulo)forma;
-      circulo = forma as Circulo;
+      Circulo outroCirculo  = (Circulo)forma;
+      outroCirculo = forma as Circulo;
 
       Console.WriteLine(forma == circulo);
+      Console.WriteLine(outroCirculo == forma);
+
+      Forma outraForma = new Forma();
+      Circulo maisUmCirculo = outraForma as Circulo;
+      maisUmCirculo.PintarCirculo();
+      maisUmCirculo.Desenhar();
 
       circulo.PintarCirculo();
     }
