@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SOLID_UDEMY
+namespace SOLID
 {
   class ClienteRico
   {

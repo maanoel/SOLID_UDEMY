@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 
-namespace SOLID_UDEMY
+namespace SOLID
 {
   public class DomainExceptionValidationException : Exception
   {

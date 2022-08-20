@@ -1,4 +1,4 @@
-﻿namespace SOLID_UDEMY
+﻿namespace SOLID
 {
   partial class Program
   {
