@@ -17,5 +17,17 @@ namespace SOLID_UDEMY
       Nome = nome;
       Endereco = endereco;
     }
+
+    public void Enderecos(params string[] enderecos)
+    {
+
+    }
+
+    //Exemplo de argumentos nomeados
+
+    public void AlterarInformacoes(int id, string nome, string endereco) 
+    {
+      Console.WriteLine($"{id}, {nome}, {endereco}");
+    }
   }
 }

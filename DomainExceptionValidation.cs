@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Runtime.Serialization;
+using System.IO;
 
 namespace SOLID_UDEMY
 {
@@ -15,5 +15,7 @@ namespace SOLID_UDEMY
       if (hasError)
         throw new DomainExceptionValidationException(error);
     }
+
+
   }
 }
