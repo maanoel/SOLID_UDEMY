@@ -10,5 +10,12 @@
 
       Saldo += valor;
     }
+
+    public virtual void Sacar(decimal valor)
+    {
+      if (valor <= 0) return;
+
+      Saldo -= valor;
+    }
   }
 }
