@@ -9,7 +9,6 @@ namespace SOLID
       Pessoa pessoa = new Pessoa();
       pessoa.Nome = "Rafa";
       pessoa.Genero = "feminino";
-      //pessoa.Nome.PrimeiraLetraCaixaAlta();
       pessoa.Nome = pessoa.Nome.PrimeiraLetraMinuscula();
 
       pessoa.Identificar();
@@ -19,6 +18,15 @@ namespace SOLID
       ClienteRico clienteRico = new ClienteRico(5, "vitor", "Pituba");
       clienteRico.Enderecos("Pituba", "São caetano", "Salvador Bahia");
       clienteRico.AlterarInformacoes(id: 1, nome: "Vitor", endereco: "Salvador");
+
+      Circulo circulo = new Circulo();
+      Forma forma = circulo; //UPcasting
+      circulo = (Circulo)forma;
+      circulo = forma as Circulo;
+
+      Console.WriteLine(forma == circulo);
+
+      circulo.PintarCirculo();
     }
   }
 }
