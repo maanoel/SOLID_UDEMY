@@ -32,11 +32,14 @@ namespace SOLID
 
       try
       {
-        Circulo circuloEstranho = (Circulo) new Forma();
+        Circulo circuloCastException = (Circulo) new Forma();
+        circuloCastException.PintarCirculo();
       }
       catch (InvalidCastException e) {
         Console.WriteLine($"Inválido{e.Message}");
       }
+
+      Circulo circuloCastSemExceotion = new Forma() as Circulo; // não lança exceçao
 
       circulo.PintarCirculo();
     }
