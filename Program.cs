@@ -6,6 +6,11 @@ namespace SOLID
   {
     static void Main(string[] args)
     {
+      
+    }
+
+    public void Teste()
+    {
       Pessoa pessoa = new Pessoa();
       pessoa.Nome = "Rafa";
       pessoa.Genero = "feminino";
@@ -21,8 +26,14 @@ namespace SOLID
 
       Circulo circulo = new Circulo();
       Forma forma = circulo; //UPcasting
-      Circulo outroCirculo  = (Circulo)forma;
+      Circulo outroCirculo = (Circulo)forma;
       outroCirculo = forma as Circulo;
+
+
+      if (forma is Circulo)
+      {
+        ((Circulo)forma).PintarCirculo();
+      }
 
       Console.WriteLine(forma == circulo);
       Console.WriteLine(outroCirculo == forma);
@@ -32,10 +43,11 @@ namespace SOLID
 
       try
       {
-        Circulo circuloCastException = (Circulo) new Forma();
+        Circulo circuloCastException = (Circulo)new Forma();
         circuloCastException.PintarCirculo();
       }
-      catch (InvalidCastException e) {
+      catch (InvalidCastException e)
+      {
         Console.WriteLine($"Inválido{e.Message}");
       }
 
